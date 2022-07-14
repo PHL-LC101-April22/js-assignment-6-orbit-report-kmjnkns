@@ -22,14 +22,18 @@ export class Satellite {
   // isSpaceDebris(): boolean {
   // 	return true;
 
-  shouldShowWarning() {
-    let satelliteType = "Space Debris";
-
-    if (this.type.toLowerCase() === satelliteType.toLowerCase()) {
-      return true;
-    }
-    return false;
+  shouldShowWarning(): boolean {
+    return this.type.toLowerCase() === "space debris";
   }
+
+  //   shouldShowWarning() {
+  //     let satelliteType = "Space Debris";
+
+  //     if (this.type.toLowerCase() === satelliteType.toLowerCase()) {
+  //       return true;
+  //     }
+  //     return false;
+  //   }
 }
 
 // TODO 3a: fix isSpaceDebris check
