@@ -1,9 +1,9 @@
 export class Satellite {
   name: string;
-  type: string;
-  launchDate: string;
   orbitType: string;
+  type: string;
   operational: boolean;
+  launchDate: string;
 
   constructor(
     name: string,
@@ -13,27 +13,16 @@ export class Satellite {
     operational: boolean
   ) {
     this.name = name;
-    this.type = type;
-    this.launchDate = launchDate;
     this.orbitType = orbitType;
+    this.type = type;
     this.operational = operational;
+    this.launchDate = launchDate;
   }
-
-  // isSpaceDebris(): boolean {
-  // 	return true;
 
   shouldShowWarning(): boolean {
-    return this.type.toLowerCase() === "space debris";
+    console.log(this.type);
+    return this.type === "Space Debris";
   }
-
-  //   shouldShowWarning() {
-  //     let satelliteType = "Space Debris";
-
-  //     if (this.type.toLowerCase() === satelliteType.toLowerCase()) {
-  //       return true;
-  //     }
-  //     return false;
-  //   }
 }
 
 // TODO 3a: fix isSpaceDebris check
